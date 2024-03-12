@@ -22,7 +22,7 @@ function Users() {
 
     async function getUsers(filter) {
         try {
-            const response = await axios.get("http://localhost:3000/api/v1/user/bulk?filter="+filter,{
+            const response = await axios.get("http://glittering-lebkuchen-ca7945/api/v1/user/bulk?filter="+filter,{
                 headers: { "Authorization": "Bearer " + localStorage.getItem("token") }
             } );
             return response.data.user;
